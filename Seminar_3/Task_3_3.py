@@ -20,3 +20,11 @@ for i in my_typle:
 pprint.pprint(my_dict1)                                # для словарей очень удобно
 print(my_dict1)                                          # верный результат
 print(my_dict2)                                         # неверный результат
+
+
+
+my_typle = (1, 2, "a", [1, 2, 3], 4.5, True, False, True)
+my_dict = {}
+for i in my_typle:
+    my_dict.setdefault(type(i), []).append(i) 
+[print(f'{key}, {value}') for key, value in my_dict.items()]
